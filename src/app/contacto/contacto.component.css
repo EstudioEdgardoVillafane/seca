@@ -17,6 +17,8 @@
 @media screen and (max-width:992px) {
     .mtmobi {
         margin-top: 3rem!important;
+        margin-bottom: 3px!important;
+
     }
     footer {
         display: none!important;

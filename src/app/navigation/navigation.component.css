@@ -1,5 +1,5 @@
 #logogrande {
-    max-width: 200px;
+    max-width: 10%;
     position: absolute;
     z-index: 1000;
     transition: 300ms all ease-in-out;
@@ -27,14 +27,19 @@ nav ul li {
 }
 
 .menumobile {
-    margin-left: -80px;
+    margin-left: -90px;
 }
 
 .menumobile ul {
     list-style: none;
-    padding-left: 0;
+    padding-left: 3px;
+    margin-left: -15px;
 }
-
+a.nav-link{
+    margin-left: -15px;
+    margin-top: -12px;
+    margin-bottom: -18px;
+}
 .menumobile ul li {
     font-weight: bold;
 }

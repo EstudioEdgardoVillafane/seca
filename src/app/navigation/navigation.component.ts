@@ -8,6 +8,7 @@ import { REVESTIMIENTOS, CIELORRASOS } from '../mock-modelos';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  public isCollapsed = false;
 
   constructor(private router: Router) { }
   modelosre = REVESTIMIENTOS;

@@ -1,0 +1,7 @@
+#fondo{
+    color:white;
+    position: absolute;
+    min-width: 100%!important;
+    min-height: 100%!important;
+    background: linear-gradient(135deg, rgba(89, 0, 81, 0.8) 0%, rgba(2, 4, 123, 0.89) 100%);
+}
