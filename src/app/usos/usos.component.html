@@ -1,18 +1,24 @@
 <app-navigation></app-navigation>
-<section class="mt-4">
-<div class="container">
+<div id="fondo">
+
+  <section class="mt-4">
+    <div class="container">
       <div class="row">
-      <div class="col-6">
+
+        
+        <div class="col-md-12 col-lg-6 col-xs-12 col-sm-12 mt-4 mx-auto">
+          <h3 align="center">Lorem impsum gerenaton.</h3>
+          <p class="ml-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam condimentum risus eu vestibulum euismod. Integer in molestie odio. Suspendisse dignissim posuere ultrices. Suspendisse gravida pretium ex, lobortis maximus turpis vehicula vel. Sed vitae eros sit amet tortor ultrices dictum. Quisque id arcu a dui volutpat molestie at at purus. Curabitur finibus ipsum quis feugiat vulputate. Maecenas laoreet justo neque, non porttitor sapien finibus a.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
           <ul class="list-group">
-              <li class="list-group-item" *ngFor="let listado of ListOfContent"><a routerLink="/usos/{{listado.u_titulo}}">{{listado.u_titulo}}</a></li>
-            </ul>
-      </div>
-      <div class="col-6">
-        <h3>Lorem impsum gerenaton.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam condimentum risus eu vestibulum euismod. Integer in molestie odio. Suspendisse dignissim posuere ultrices. Suspendisse gravida pretium ex, lobortis maximus turpis vehicula vel. Sed vitae eros sit amet tortor ultrices dictum. Quisque id arcu a dui volutpat molestie at at purus. Curabitur finibus ipsum quis feugiat vulputate. Maecenas laoreet justo neque, non porttitor sapien finibus a.</p>
-      </div>
+            <li class="list-group-item" *ngFor="let listado of ListOfContent"><a routerLink="/usos/{{listado.u_titulo}}">{{listado.u_titulo}}</a></li>
+          </ul>
+        </div>
     </div>
-</div>
+  </div>
 </section>
 
+</div>
 <app-footer></app-footer>
