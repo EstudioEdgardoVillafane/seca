@@ -1,0 +1,14 @@
+<section  style="background-color:#e2e2e2; height:100vh; padding-top:7%;" *ngIf="UserOnline; else navbare">
+  <div>
+      <div class="loginmodal-container">
+        <h1>Iniciar Sesión</h1><br>
+        <input type="text" id="usuario" placeholder="Usuario">
+        <input type="password" id="contrasena" placeholder="contraseña">
+        <div *ngIf="BooleanAlertLogin" class="alert alert-danger">*Contraseña o usuario incorrecto.</div>        
+
+        <input type="submit" name="login" class="login loginmodal-submit clientes-login" (click)="onClick()" value="Acceder">
+        <button type="button" class="btn btn-sm btn-outline-info d-block ml-auto mt-3" style="cursor:pointer" routerLink="/home">Volver</button>
+      </div>
+    </div>
+  </section>
+ 

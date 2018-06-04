@@ -21,6 +21,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import { UsosComponent } from './usos/usos.component';
 import { ItemUsosComponent } from './item-usos/item-usos.component';
 import { BackendNavbarComponent } from './backend-navbar/backend-navbar.component';
+import { BackendLoginComponent } from './backend-login/backend-login.component';
+import { BackendLoginService } from './backend-login.service';
 const routes: Routes = [
   {
     path: 'home',
@@ -86,7 +88,8 @@ const routes: Routes = [
     BackendContentComponent,
     UsosComponent,
     ItemUsosComponent,
-    BackendNavbarComponent
+    BackendNavbarComponent,
+    BackendLoginComponent
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -100,7 +103,7 @@ const routes: Routes = [
   exports: [
     [RouterModule]
   ],
-  providers: [ContentService],
+  providers: [ContentService,BackendLoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
