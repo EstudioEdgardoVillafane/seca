@@ -11,12 +11,12 @@
                     <li> <a class="nav-link" routerLink="/home">Home</a></li>
                     <li class="nav-item "> <a class="nav-link" >Revestimientos</a>
                         <ul>
-                            <li *ngFor="let modelore of modelosre" (click)="onTabChange('/revestimientos/'+modelore.nombre)" class="r">{{modelore.nombre}}</li>
+                            <li *ngFor="let modelore of modelosre" (click)="onTabChange('/revestimientos/'+modelore.nombre)" class="r">{{modelore.nombre | changeSpace}}</li>
                         </ul>
                     </li>
                     <li> <a class="nav-link">Cielorrasos</a>
                         <ul>
-                            <li *ngFor="let modeloci of modelosci" (click)="onTabChange('/cielorrasos/'+modeloci.nombre)">{{modeloci.nombre}}</li>
+                            <li *ngFor="let modeloci of modelosci" (click)="onTabChange('/cielorrasos/'+modeloci.nombre)">{{modeloci.nombre | changeSpace}}</li>
                         </ul>
                     </li>
                     <li><a class="nav-link" routerLink="/usos">Usos</a></li>
@@ -35,7 +35,7 @@
                     <div ngbDropdown>
                         <a class="nav-link dropdown-toggle" id="dropdownConfig1" ngbDropdownToggle>Revestimientos</a>
                         <ul ngbDropdownMenu aria-labelledby="dropdownConfig1">
-                            <li class="dropdown-item droplista" *ngFor="let modelore of modelosre" (click)="onTabChange('/revestimientos/'+modelore.nombre)">{{modelore.nombre}}</li>
+                            <li class="dropdown-item droplista" *ngFor="let modelore of modelosre" (click)="onTabChange('/revestimientos/'+modelore.nombre)">{{modelore.nombre  | changeSpace}}</li>
 
                         </ul>
                     </div>
@@ -44,7 +44,7 @@
                     <div ngbDropdown>
                         <a class="nav-link dropdown-toggle" id="dropdownConfig" ngbDropdownToggle>Cielorrasos</a>
                         <ul ngbDropdownMenu aria-labelledby="dropdownConfig">
-                            <li class="dropdown-item droplista" *ngFor="let modeloci of modelosci" (click)="onTabChange('/cielorrasos/'+modeloci.nombre)">{{modeloci.nombre}}</li>
+                            <li class="dropdown-item droplista" *ngFor="let modeloci of modelosci" (click)="onTabChange('/cielorrasos/'+modeloci.nombre)">{{modeloci.nombre  | changeSpace}}</li>
 
                         </ul>
                     </div>
