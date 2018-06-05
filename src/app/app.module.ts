@@ -21,10 +21,16 @@ import { HttpClientModule }    from '@angular/common/http';
 import { UsosComponent } from './usos/usos.component';
 import { ItemUsosComponent } from './item-usos/item-usos.component';
 import { BackendNavbarComponent } from './backend-navbar/backend-navbar.component';
+import { BackendUserComponent } from './backend-user/backend-user.component';
+import { BackendUserService } from './backend-user.service';
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'usuario',
+    component: BackendUserComponent,
   },
   {
     path: 'admin',
@@ -86,7 +92,8 @@ const routes: Routes = [
     BackendContentComponent,
     UsosComponent,
     ItemUsosComponent,
-    BackendNavbarComponent
+    BackendNavbarComponent,
+    BackendUserComponent
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -100,7 +107,7 @@ const routes: Routes = [
   exports: [
     [RouterModule]
   ],
-  providers: [ContentService],
+  providers: [ContentService,BackendUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

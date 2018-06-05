@@ -35,6 +35,10 @@ class Connect{
 		$this->conn->query($sql);
 		return mysqli_insert_id($this->conn);
 	}
+	public function Search($sql){
+		$result = $this->conn->query($sql);
+		return mysqli_num_rows($result);
+	}
 }
 
 ?>
