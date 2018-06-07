@@ -13,7 +13,7 @@
 
         <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
           <ul class="list-group">
-            <li class="list-group-item" *ngFor="let listado of ListOfContent"><a routerLink="/usos/{{listado.u_titulo}}">{{listado.u_titulo}}</a></li>
+            <li class="list-group-item" *ngFor="let listado of ListOfContent"><a routerLink="/usos/{{listado.u_titulo}}">{{listado.u_titulo | changeSpace}}</a></li>
           </ul>
         </div>
     </div>

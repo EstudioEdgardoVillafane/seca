@@ -21,6 +21,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import { UsosComponent } from './usos/usos.component';
 import { ItemUsosComponent } from './item-usos/item-usos.component';
 import { BackendNavbarComponent } from './backend-navbar/backend-navbar.component';
+import { ChangeSpacePipe } from './change-space.pipe';
 const routes: Routes = [
   {
     path: 'home',
@@ -86,7 +87,8 @@ const routes: Routes = [
     BackendContentComponent,
     UsosComponent,
     ItemUsosComponent,
-    BackendNavbarComponent
+    BackendNavbarComponent,
+    ChangeSpacePipe
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
