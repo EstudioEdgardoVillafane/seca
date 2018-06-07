@@ -21,11 +21,18 @@ import { HttpClientModule }    from '@angular/common/http';
 import { UsosComponent } from './usos/usos.component';
 import { ItemUsosComponent } from './item-usos/item-usos.component';
 import { BackendNavbarComponent } from './backend-navbar/backend-navbar.component';
+import { BackendUserComponent } from './backend-user/backend-user.component';
+import { BackendUserService } from './backend-user.service';
 import { ChangeSpacePipe } from './change-space.pipe';
+
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'usuario',
+    component: BackendUserComponent,
   },
   {
     path: 'admin',
@@ -88,8 +95,8 @@ const routes: Routes = [
     UsosComponent,
     ItemUsosComponent,
     BackendNavbarComponent,
+    BackendUserComponent,
     ChangeSpacePipe
-
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -102,7 +109,7 @@ const routes: Routes = [
   exports: [
     [RouterModule]
   ],
-  providers: [ContentService],
+  providers: [ContentService,BackendUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

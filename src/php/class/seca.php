@@ -3,9 +3,15 @@ class Seca{
 	public function ExecuteSql($sql){
 		$conex = New Connect();
 		$conex -> CreateConnection();
-		$conex -> Execute($sql);
+		return $conex -> Execute($sql);
 		$conex -> CloseConnection();
 	}	  
+	public function Search($sql){
+		$conex = New Connect();
+		$conex -> CreateConnection();
+		return $conex -> Search($sql);
+		$conex -> CloseConnection();
+	}	
 	public function CreateJson($sql){
 		$con = New Connect();
 		$con -> CreateConnection();
@@ -17,6 +23,7 @@ class Seca{
 	        $i++;
 		}
 		echo json_encode($ArrayJson);
+		return json_encode($ArrayJson);
 		$con -> CloseConnection();		
 	}
 	public function Borrar($sql){
@@ -24,6 +31,13 @@ class Seca{
 			$con->CreateConnection();
 			$con->Execute($sql);
 			$con->CloseConnection();
+	}
+	public function SaveJson($varJson){
+		$file = 'productos.json';
+		file_put_contents($file, $varJson);
+	}
+	public function ReadJson(){
+		echo $dataProduct = file_get_contents("productos.json");
 	}
 }
 
