@@ -12,6 +12,13 @@ $NewConnect = new Seca();
 	$tmp = $_FILES['uploadedfile']['tmp_name'];
 	$file_name = $_FILES['uploadedfile']['name'];
 
+	$Titulo = str_replace(" ","-",$Titulo);
+	$Titulo = str_replace("ñ","n",$Titulo);
+	$Titulo = str_replace("á","a",$Titulo);
+	$Titulo = str_replace("é","e",$Titulo);
+	$Titulo = str_replace("í","i",$Titulo);
+	$Titulo = str_replace("ó","o",$Titulo);
+	$Titulo = str_replace("ú","u",$Titulo);
 
 	$ancho_fijo=1920;
 	$alto_fijo=1080;

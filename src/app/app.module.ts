@@ -23,6 +23,8 @@ import { ItemUsosComponent } from './item-usos/item-usos.component';
 import { BackendNavbarComponent } from './backend-navbar/backend-navbar.component';
 import { BackendUserComponent } from './backend-user/backend-user.component';
 import { BackendUserService } from './backend-user.service';
+import { ChangeSpacePipe } from './change-space.pipe';
+
 const routes: Routes = [
   {
     path: 'home',
@@ -93,8 +95,8 @@ const routes: Routes = [
     UsosComponent,
     ItemUsosComponent,
     BackendNavbarComponent,
-    BackendUserComponent
-
+    BackendUserComponent,
+    ChangeSpacePipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
