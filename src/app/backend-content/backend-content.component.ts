@@ -1,7 +1,3 @@
-
-
-
-
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../content.service';
 import 'rxjs/add/operator/map';
@@ -27,8 +23,9 @@ export class BackendContentComponent implements OnInit {
   ListOfContent;
   Aux;
   titulo;
-  parrafo;
   subtitulo;
+  parrafo;
+  uploadImg;
   ListEdit;
   list;
   formElement;
@@ -40,6 +37,7 @@ export class BackendContentComponent implements OnInit {
   BooleanToAlertTitulo = false;
   BooleanToAlertSubTitulo = false;
   BooleanToAlertParrafo = false;
+  BooleanToAlertImg = false;
   BooleanToValidate = false;
 
   /** I am defining the service. */
@@ -82,22 +80,32 @@ export class BackendContentComponent implements OnInit {
     this.titulo = document.getElementById('titulo-ed');
     this.subtitulo = document.getElementById('subtitulo-ed');
     this.parrafo = document.getElementById('parrafo-ed');
+    this.uploadImg = document.getElementById('uploadedfile'); 
 
     if(this.titulo.value == ""){
       this.BooleanToAlertTitulo = true;
     }else{
       this.BooleanToAlertTitulo = false;
     } 
+
     if(this.subtitulo.value == ""){
       this.BooleanToAlertSubTitulo = true;
     }else{
       this.BooleanToAlertSubTitulo = false;
     } 
+
     if(this.parrafo.value == ""){
       this.BooleanToAlertParrafo = true;
     }else{
       this.BooleanToAlertParrafo = false;
     }
+
+    if(this.uploadImg.value == ""){
+      this.BooleanToAlertImg = true;
+    }else{
+      this.BooleanToAlertImg = false;
+    }
+
     if(this.titulo.value != "" && this.subtitulo.value != "" && this.parrafo.value !=""){
       this.BooleanToValidate =true;
     }

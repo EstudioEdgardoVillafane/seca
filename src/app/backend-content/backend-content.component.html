@@ -1,89 +1,95 @@
 <section class="pt-5 pb-5 my-5">
   <div class="container mt-5">
-   
+
     <ng-template #other_content>
-       
+
 
       <div *ngIf="BooleanAdd;else otr">
-          <form method="post" id="Formulario" enctype="multipart/form-data">
-        <div class="row text-center">
-        <div class="col-12">
-        <h2>Agregar nuevo uso</h2>
-        <hr>
-      </div>
-      </div>
-    
-    <div class="row">
-
-      <div class="col-6">
-        <label>Titulo</label>
-      </div>
-      <div class="col-6">
-        <input type="text" id="nombre" placeholder="Titulo del uso" name="titulo" class="form-control" required>
-        <div *ngIf="BooleanToAlertTitulo" class="alert alert-danger">
-          <div>
-            * Debe ingresar un titulo.
-          </div>
-        </div>
-    </div>
-      </div>
-      <div class="row"> 
-        <div class="col-6">
-          <label>Subtitulo</label>
-        </div>
-      <div class="col-6">   
-        <input type="text" id="precio" value="" class="mt-2 form-control" name="subtitulo" placeholder="Subtitulo del uso" required>
-        <div *ngIf="BooleanToAlertSubTitulo" class="alert alert-danger">
-            <div>
-              * Debe ingresar un subtitulo.
+        <!-- formulario -->
+        <form method="post" id="Formulario" enctype="multipart/form-data">
+          <div class="row text-center">
+            <div class="col-12">
+              <h2>Agregar nuevo uso</h2>
+              <hr>
             </div>
           </div>
-      </div>
-    </div>
-    <div class="row">
-        <div class="col-6">
-          <label>Parrafo</label>
-        </div>
-        <div class="col-6">         
-          <textarea placeholder="Describa su producto" name="parrafo" id="descripcion" class="mt-2 form-control"></textarea>
-          <div *ngIf="BooleanToAlertParrafo" class="alert alert-danger">
-              <div>
-                * Debe ingresar un texto que describa su producto.
+
+          <div class="row">
+
+            <div class="col-6">
+              <label>Titulo</label>
+            </div>
+            <div class="col-6">
+              <input type="text" id="nombre" placeholder="Titulo del uso" name="titulo" class="form-control" required>
+              <div *ngIf="BooleanToAlertTitulo" class="alert alert-danger">
+                <div>
+                  * Debe ingresar un titulo.
+                </div>
               </div>
             </div>
-        </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <label>Subir imagen</label>
           </div>
-          <div class="col-6">
-            <input type="file" name="uploadedfile" class="mt-2 form-control">
+          <div class="row">
+            <div class="col-6">
+              <label>Subtitulo</label>
+            </div>
+            <div class="col-6">
+              <input type="text" id="precio" value="" class="mt-2 form-control" name="subtitulo" placeholder="Subtitulo del uso" required>
+              <div *ngIf="BooleanToAlertSubTitulo" class="alert alert-danger">
+                <div>
+                  * Debe ingresar un subtitulo.
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <label>Parrafo</label>
+            </div>
+            <div class="col-6">
+              <textarea placeholder="Describa su producto" name="parrafo" id="descripcion" class="mt-2 form-control"></textarea>
+              <div *ngIf="BooleanToAlertParrafo" class="alert alert-danger">
+                <div>
+                  * Debe ingresar un texto que describa su producto.
+                </div>
+              </div>
+            </div>
           </div>
-    <div class="row mb-2 text-center">
-      <div class="col-12">
-        <hr>
-      </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <input (click)="Store()" type="submit" value="Agregar" class="pull-right btn btn-md btn-primary ml-1">
-          <input type="button" class="pull-right btn btn-md btn-danger ml-1" (click)="Return()" value="Volver">
-        </div>
-      </div>
-    </form>
-      </div>
-    
-
-    <ng-template #otr>
-        <div class="row text-center">
+          <div class="row">
+            <div class="col-6">
+              <label>Subir imagen</label>
+            </div>
+            <div class="col-6">
+              <input type="file" name="uploadedfile" class="mt-2 form-control">
+              <div *ngIf="BooleanToAlertImg" class="alert alert-danger">
+                  <div>
+                    * Debe ingresar la ruta de una imágen.
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="row mb-2 text-center">
             <div class="col-12">
+              <hr>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input (click)="Store()" type="submit" value="Agregar" class="pull-right btn btn-md btn-primary ml-1">
+              <input type="button" class="pull-right btn btn-md btn-danger ml-1" (click)="Return()" value="Volver">
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <ng-template #otr>
+        <div class="row text-center">
+          <div class="col-12">
             <h2>Editar uso</h2>
             <hr>
           </div>
-          </div>
-        
+        </div>
+
         <div class="row">
           <div class="col-6">
             <label>Titulo</label>
@@ -91,92 +97,96 @@
           <div class="col-6">
             <input id="titulo-ed" value="{{ListEdit.u_titulo}}" placeholder="Nombre" class="form-control">
             <div *ngIf="BooleanToAlertTitulo" class="alert alert-danger">
-                <div>
-                  * Debe ingresar un titulo.
-                </div>
+              <div>
+                * Debe ingresar un titulo.
+              </div>
             </div>
           </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-6">
+            <label>Subtitulo</label>
           </div>
-          
-          
-          <div class="row"> 
-            <div class="col-6">
-              <label>Subtitulo</label>
-            </div>
-          <div class="col-6">   
+          <div class="col-6">
             <input id="subtitulo-ed" value="{{ListEdit.u_subtitulo}}" class="mt-2 form-control" placeholder="Precio">
             <div *ngIf="BooleanToAlertSubTitulo" class="alert alert-danger">
-                <div>
-                  * Debe ingresar un subtitulo.
-                </div>
+              <div>
+                * Debe ingresar un subtitulo.
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
-            <div class="col-6">
-              <label>Parrafo</label>
-            </div>
-            <div class="col-6">
-              <textarea id="parrafo-ed" value="{{ListEdit.u_parrafo}}" placeholder="Descripcion" class="mt-2 form-control"></textarea>
-              <div *ngIf="BooleanToAlertParrafo" class="alert alert-danger">
-                  <div>
-                    * Debe ingresar un texto que describa su producto.
-                  </div>
+          <div class="col-6">
+            <label>Parrafo</label>
+          </div>
+          <div class="col-6">
+            <textarea id="parrafo-ed" value="{{ListEdit.u_parrafo | slice:0:80}}" placeholder="Descripcion" class="mt-2 form-control"></textarea>
+            <div *ngIf="BooleanToAlertParrafo" class="alert alert-danger">
+              <div>
+                * Debe ingresar un texto que describa su producto.
               </div>
             </div>
-            </div>
+          </div>
+        </div>
         <div class="row mb-2 text-center">
           <div class="col-12">
             <hr>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button class="pull-right btn btn-md btn-danger ml-1" (click)="Return()">Volver</button>
+            <button class="pull-right btn btn-md btn-primary" (click)="EditReg(ListEdit.u_id)">Editar</button>
           </div>
-          <div class="row">
-            <div class="col-12">
-              <button class="pull-right btn btn-md btn-danger ml-1" (click)="Return()">Volver</button>
-              <button class="pull-right btn btn-md btn-primary" (click)="EditReg(ListEdit.u_id)">Editar</button>
-            </div>
-         </div>
-    </ng-template>
+        </div>
+      </ng-template>
     </ng-template>
     <div *ngIf="BooleanTable;else other_content" class="mt-1">
-      
-    <div class="row">
-      <div class="col-5">
-        <h2>Tabla de usos.</h2>
-      </div>
-      <div class="col-7">
-        <button class="btn btn-md btn-primary pull-right ml-1" (click)="ShowAdd()">Agregar</button>
-        <button class="btn btn-md btn-danger pull-right" (click)="DeleteReg()">Eliminar</button>
-      </div>  
-    </div>   
-    <div style="overflow-x:auto;">
-            <table class="table table-bordered mt-3"  width="100%">
-            <thead>
-              <tr>
-                <th style="width: 1px;">#</th>
-                <th>Titulo</th>
-                <th>Subtitulo</th>
-                <th>Parrafo</th>
-                <th style="width:25px;">Foto</th>
-                <th style="width: 25px">Editar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let content of ListOfContent"> 
-                <td><input type="checkbox" class="tilde" value="{{content.u_id}}" (click)="onCheck(content.u_id)"></td>
-                <td>{{content.u_titulo}}</td>
-                <td>{{content.u_subtitulo}}</td>
-                <td>{{content.u_parrafo}}</td>
-                <td style="height:80px"><img src="{{content.u_imagen}}" style="max-height: 100%"></td>
-                <td>
-                  <button value="" (click)="ShowEdit(content.u_id)">
-                    <i class="fa fa-pencil"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+      <div class="row">
+        <div class="col-5">
+          <h2>Tabla de usos.</h2>
         </div>
+        <div class="col-7">
+          <button class="btn btn-md btn-primary pull-right ml-1" (click)="ShowAdd()">Agregar</button>
+          <button class="btn btn-md btn-danger pull-right" (click)="DeleteReg()">Eliminar</button>
+        </div>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="table table-bordered mt-3" width="100%">
+          <thead>
+            <tr>
+              <th style="width: 1px;">#</th>
+              <th>Titulo</th>
+              <th>Subtitulo</th>
+              <th>Parrafo</th>
+              <th style="width:25px;">Foto</th>
+              <th style="width: 25px">Editar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let content of ListOfContent">
+              <td>
+                <input type="checkbox" class="tilde" value="{{content.u_id}}" (click)="onCheck(content.u_id)">
+              </td>
+              <td>{{content.u_titulo}}</td>
+              <td>{{content.u_subtitulo}}</td>
+              <td>{{content.u_parrafo | slice:0:80 }}</td>
+              <td style="height:80px">
+                <img src="{{content.u_imagen}}" style="max-height: 100%">
+              </td>
+              <td>
+                <button value="" (click)="ShowEdit(content.u_id)">
+                  <i class="fa fa-pencil"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div> 
+  </div>
 </section>
