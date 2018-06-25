@@ -211,8 +211,8 @@ export class BackendContentComponent implements OnInit {
       this.request.open("POST", "php/script/store-content.php");
       console.log(this.request.send(new FormData(this.formElement)));
       this.ListContent();
-    //   location.reload();
-    //  console.log("hola");
+      location.reload();
+     console.log("hola");
     }
     }
 
